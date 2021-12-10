@@ -70,17 +70,19 @@ body {
         border-bottom: solid 2px $lightGrayishBlue;
         padding: 1rem 0rem;
         .question {
+          display: block;
+          text-decoration: none;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          cursor: pointer;
-          color: $veryDarkGrayishBlue;
 
           &:hover {
-            color: $softRed;
+            .title{
+              color: $softRed;
+            }
           }
 
-          &.active {
+          &:focus {
             & + .answer{
               display: block;
             }

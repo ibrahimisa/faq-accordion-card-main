@@ -42,21 +42,21 @@ body {
         border-bottom: solid 2px #e7e7e9;
         padding: 1rem 0rem; }
         body .container main.faqs .faq .question {
+          display: block;
+          text-decoration: none;
           display: flex;
           justify-content: space-between;
-          align-items: center;
-          cursor: pointer;
-          color: #4a4b5e; }
-          body .container main.faqs .faq .question:hover {
+          align-items: center; }
+          body .container main.faqs .faq .question:hover .title {
             color: #f47c57; }
-          body .container main.faqs .faq .question.active + .answer {
+          body .container main.faqs .faq .question:focus + .answer {
             display: block; }
-          body .container main.faqs .faq .question.active .title {
+          body .container main.faqs .faq .question:focus .title {
             font-family: "Kumbh Sans", sans-serif;
             font-size: 12px;
             font-weight: 700;
             color: #4a4b5e; }
-          body .container main.faqs .faq .question.active .arrow {
+          body .container main.faqs .faq .question:focus .arrow {
             transform: rotate(180deg); }
           body .container main.faqs .faq .question .title {
             font-family: "Kumbh Sans", sans-serif;
