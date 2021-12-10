@@ -18,7 +18,7 @@ $lightGrayishBlue: hsl(240, 5%, 91%);
 /* font */
 @font-face {
   font-family: "Kumbh Sans";
-  src: url(./font/Kumbh_Sans/KumbhSans-VariableFont_wght.ttf);
+  src: url(./font/KumbhSans-VariableFont_wght.ttf);
 }
 @mixin font($fontWeight: 400, $fontSize: 12px) {
   font-family: "Kumbh Sans", sans-serif;
