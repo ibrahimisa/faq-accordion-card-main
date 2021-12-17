@@ -20,7 +20,7 @@ $lightGrayishBlue: hsl(240, 5%, 91%);
   font-family: "Kumbh Sans";
   src: url(./font/KumbhSans-VariableFont_wght.ttf);
 }
-@mixin font($fontWeight: 400, $fontSize: 12px) {
+@mixin font($fontWeight: 400, $fontSize: 1rem) {
   font-family: "Kumbh Sans", sans-serif;
   font-size: $fontSize;
   font-weight: $fontWeight;
@@ -42,7 +42,7 @@ body {
     background: white;
     border-radius: 1rem;
     margin: 10rem auto;
-    width: 20.5rem;
+    width: 24rem;
     position: relative;
 
     /* illustration */
@@ -69,15 +69,20 @@ body {
       .faq {
         border-bottom: solid 2px $lightGrayishBlue;
         padding: 1rem 0rem;
-        .question {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          cursor: pointer;
-          color: $veryDarkGrayishBlue;
-
-          &:hover {
-            color: $softRed;
+        .accordion{
+          .btn{
+            width: 100%;
+            border: none;
+            background: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            @include font(700);
+            color: $darkGrayishBlue;
+              &:hover {
+                color: $softRed;
+              }
           }
 
           &.active {
@@ -85,7 +90,7 @@ body {
               display: block;
             }
 
-            .title {
+            .btn {
               @include font(700);
               color: $veryDarkGrayishBlue;
             }
@@ -93,20 +98,6 @@ body {
             .arrow {
               transform: rotate(180deg);
             }
-          }
-
-          .title {
-            // this style isnt put on .question
-            // because we are using h2 for the title
-            // there default h2 style will override the
-            // one set in .question
-            @include font(700);
-            color: $darkGrayishBlue;
-          }
-
-          .arrow {
-            margin-left: 2rem;
-            transition: 0.3s;
           }
         }
 

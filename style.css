@@ -13,14 +13,14 @@
 body {
   min-height: 100vh;
   font-family: "Kumbh Sans", sans-serif;
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: 400;
   background: linear-gradient(to bottom, #af67e9, #6565e7); }
   body .container {
     background: white;
     border-radius: 1rem;
     margin: 10rem auto;
-    width: 20.5rem;
+    width: 24rem;
     position: relative;
     /* illustration */ }
     body .container::before {
@@ -41,31 +41,29 @@ body {
       body .container main.faqs .faq {
         border-bottom: solid 2px #e7e7e9;
         padding: 1rem 0rem; }
-        body .container main.faqs .faq .question {
+        body .container main.faqs .faq .accordion .btn {
+          width: 100%;
+          border: none;
+          background: none;
           display: flex;
           justify-content: space-between;
           align-items: center;
           cursor: pointer;
-          color: #4a4b5e; }
-          body .container main.faqs .faq .question:hover {
+          font-family: "Kumbh Sans", sans-serif;
+          font-size: 1rem;
+          font-weight: 700;
+          color: #787887; }
+          body .container main.faqs .faq .accordion .btn:hover {
             color: #f47c57; }
-          body .container main.faqs .faq .question.active + .answer {
-            display: block; }
-          body .container main.faqs .faq .question.active .title {
-            font-family: "Kumbh Sans", sans-serif;
-            font-size: 12px;
-            font-weight: 700;
-            color: #4a4b5e; }
-          body .container main.faqs .faq .question.active .arrow {
-            transform: rotate(180deg); }
-          body .container main.faqs .faq .question .title {
-            font-family: "Kumbh Sans", sans-serif;
-            font-size: 12px;
-            font-weight: 700;
-            color: #787887; }
-          body .container main.faqs .faq .question .arrow {
-            margin-left: 2rem;
-            transition: 0.3s; }
+        body .container main.faqs .faq .accordion.active + .answer {
+          display: block; }
+        body .container main.faqs .faq .accordion.active .btn {
+          font-family: "Kumbh Sans", sans-serif;
+          font-size: 1rem;
+          font-weight: 700;
+          color: #4a4b5e; }
+        body .container main.faqs .faq .accordion.active .arrow {
+          transform: rotate(180deg); }
         body .container main.faqs .faq .answer {
           display: none;
           text-align: left;
